@@ -4,16 +4,14 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
-/*@RunWith(Cucumber.class)
+@RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = "html:target/cucumberReports.html",
-        features = "src/test/resources/features",
+        features = "src/test/resources/feature",
         glue="steps",
-        tags="@google",
-        dryRun=false
+        tags="@cw",
+        dryRun=true
 )
-
 
 public class CukesRunner {
 }
-*/

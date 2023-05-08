@@ -1,10 +1,25 @@
 package tests;
 
-import utilities.Driver;
+import studyMate.Group;
 
 public class Phone {
-
     public static void main(String[] args) {
-        Driver.getDriver().get("https://google.com");
+        Group group=new Group();
+        group.groupName="Batch 1";
+        group.gradationDate="May";
+        group.description="the group for the first batch";
+        group.image="some picture";
+
+     /*
+     Json format:
+     "group":{
+     "groupName":"Batch 1",
+     "graduationDate":"May",
+     "description":"the group for the first batch",
+     "image":"some picture"
+     }
+     */
+
+        
     }
 }

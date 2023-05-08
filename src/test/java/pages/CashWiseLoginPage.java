@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 import utilities.Flow;
 
+import java.util.List;
+
 public class CashWiseLoginPage {
 
     public CashWiseLoginPage() {
@@ -24,6 +26,13 @@ public class CashWiseLoginPage {
     @FindBy(xpath = "(//button[@type='submit'])[2]")
     public WebElement signInInputButton;
 
+    @FindBy(xpath = "((//form)[2]//p)[1]")
+    public WebElement emailErrorMessage;
+
+    @FindBy(xpath = "((//form)[2]//p)[2]")
+    public WebElement passwordErrorMessage;
+
+
     public void signInCashWise(String email, String password){
         signInButton.click();
         Flow.wait(300);
@@ -32,6 +41,9 @@ public class CashWiseLoginPage {
         signInInputButton.click();
 
     }
+
+    @FindBy(xpath = "//h2[.='We offer']/..//h3")
+    public List<WebElement> benefitsList;
 
 
 }

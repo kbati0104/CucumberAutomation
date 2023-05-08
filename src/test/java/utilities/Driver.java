@@ -21,6 +21,10 @@ public class Driver {
                 ChromeOptions co = new ChromeOptions();
                 co.addArguments("--remote-allow-origins=*");
 
+                if(Config.getValue("headless").equalsIgnoreCase("true")){
+                    co.addArguments("--headless=new");
+                }
+
                 driver = new ChromeDriver(co);
                 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
